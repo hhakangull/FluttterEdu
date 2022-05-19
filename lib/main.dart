@@ -9,10 +9,9 @@ import 'dart:developer';
 // import '101/scaffold_learn.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import '101/custom_widget_learn.dart';
+import '101/indicator_learn.dart';
 
-import '101/padding_learn.dart';
-import '101/stateless_learn.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -29,11 +28,11 @@ class MyApp extends StatelessWidget {
           // errorColor: ColorsItems.newColor,
           appBarTheme: const AppBarTheme(
         centerTitle: true,
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.transparent,        
         elevation: 0,
-        systemOverlayStyle: SystemUiOverlayStyle.light,
+        //systemOverlayStyle: SystemUiOverlayStyle.light,
       )),
-      home: PaddingLearn(),
+      home: const IndicatorLearn(),
     );
   }
 }
