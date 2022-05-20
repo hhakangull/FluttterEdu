@@ -10,18 +10,36 @@ class ColumnRowLearn extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-              flex: 4,
-              child: Row(
-                children: [
-                  Expanded(child: Container(color: Colors.red)),
-                  Expanded(child: Container(color: Colors.green)),
-                  Expanded(child: Container(color: Colors.blue)),
-                  Expanded(child: Container(color: Colors.pink)),
-                ],
-              )),
-          Expanded(flex: 2, child: Container(color: Colors.green)),
-          Expanded(flex: 2, child: Container(color: Colors.yellow)),
-          Expanded(flex: 2, child: Container(color: Colors.purple)),
+            flex: 4,
+            child: Row(
+              children: [
+                Expanded(child: Container(color: Colors.red)),
+                Expanded(child: Container(color: Colors.green)),
+                Expanded(child: Container(color: Colors.blue)),
+                Expanded(child: Container(color: Colors.pink)),
+              ],
+            ),
+          ),
+          const Spacer(
+            flex: 2,
+          ),
+          Expanded(
+            flex: 2,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text('a - data'),
+                Column(children: [
+                  Text('123123'),
+                  Text('123123'),
+                  Text('123123'),
+                ]),
+                Text('b - data'),
+                Text('c - data'),
+              ],
+            ),
+          ),
         ],
       ),
     );
