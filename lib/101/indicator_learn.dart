@@ -7,12 +7,21 @@ class IndicatorLearn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(
-        child: Column(
-          children: const [
-            Text("data"),
-          ],
-        ),
+      body: Center(child: CenterCircularProgress()),
+    );
+  }
+}
+
+class CenterCircularProgress extends StatelessWidget {
+  const CenterCircularProgress({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: CircularProgressIndicator(
+        color: Colors.red,
+        strokeWidth: 10,
+        
       ),
     );
   }
