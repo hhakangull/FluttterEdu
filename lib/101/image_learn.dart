@@ -14,8 +14,6 @@ class ImageLearnView extends StatelessWidget {
             ImageView(imageName: "1.jpg"),
             ImageView(imageName: "2.jpg"),
             ImageView(imageName: "3.jpg"),
-            ImageView(imageName: "3.jpg"),
-            ImageView(imageName: "3.jpg"),
           ],
         ),
       ),
