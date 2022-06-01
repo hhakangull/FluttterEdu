@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../product/counter_button.dart';
+import '../product/language/language_items.dart';
+
 class StatefulLearn extends StatefulWidget {
   const StatefulLearn({Key? key}) : super(key: key);
   @override
@@ -8,7 +11,6 @@ class StatefulLearn extends StatefulWidget {
 
 class _StatefulLearnState extends State<StatefulLearn> {
   int _countValue = 0;
-  int _counterCustom = 0;
 
   void incrementValue() => _countValue += 1;
 
@@ -29,7 +31,9 @@ class _StatefulLearnState extends State<StatefulLearn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text(LanguageItems.welcomeTitle),
+      ),
       floatingActionButton: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -46,13 +50,7 @@ class _StatefulLearnState extends State<StatefulLearn> {
             ),
           ),
           const Placeholder(),
-          ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  _counterCustom += 1;
-                });
-              },
-              child: Text('Merhaba $_counterCustom'))
+          const CounterHelloButton()
         ],
       ),
     );
